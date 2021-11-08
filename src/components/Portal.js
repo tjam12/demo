@@ -1,8 +1,20 @@
-const Portal = ({ Logout, Subject, onToggle, onAdd }) => {
-  const onSubmit = (e) => {
-    e.preventDefault();
+const Portal = ({ Logout, Subject, onToggle, onAdd, listSubject }) => {
+  const onAddSubj = (e) => {
+    let prevlistSubject=[];
 
-    onAdd("a");
+    /*{Subject.map((Subject)=>Subject.selected ? onAdd(Subject.subject):'')}*/
+    {Subject.map((Subject)=>Subject.selected&&!Subject.registered ? listSubject.push(Subject.subject):'')}
+
+    onAdd(listSubject)
+  };
+
+  const onDelSubj = (e) => {
+    
+
+    /*{Subject.map((Subject)=>Subject.selected ? onAdd(Subject.subject):'')}*/
+    {Subject.map((Subject)=>!Subject.selected&&Subject.registered ? listSubject.push(Subject.subject):'')}
+
+    onAdd(listSubject)
   };
 
   return (
@@ -25,7 +37,7 @@ const Portal = ({ Logout, Subject, onToggle, onAdd }) => {
         )}
 
         <div className="Bottom">
-          <button className="btn btn-block" onClick={onSubmit}>
+          <button className="btn btn-block" onClick={onAddSubj} >
             Register
           </button>
         </div>
@@ -60,7 +72,7 @@ const Portal = ({ Logout, Subject, onToggle, onAdd }) => {
         </div>
         
         <div className="Bottom">
-          <button className="btn btn-block" onClick={onSubmit}>
+          <button className="btn btn-block" onClick={onDelSubj}>
             Delete
           </button>
         </div>

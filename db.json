@@ -1,0 +1,70 @@
+{
+  "subjects": [
+    {
+      "id": 1,
+      "subject": "javascript",
+      "marks": 30,
+      "registered": false,
+      "selected": false
+    },
+    {
+      "id": 2,
+      "subject": "antioni",
+      "marks": 60,
+      "registered": false,
+      "selected": false
+    },
+    {
+      "id": 3,
+      "subject": "mathematics",
+      "marks": 90,
+      "registered": false,
+      "selected": false
+    }
+  ],
+  "emails": [
+    {
+      "email": "1@student.com",
+      "password": "admin",
+      "name": "Ali",
+      "type": "student"
+    },
+    {
+      "email": "2@student.com",
+      "password": "admin",
+      "name": "Abu",
+      "type": "student"
+    },
+    {
+      "email": "1@lecturer.com",
+      "password": "admin",
+      "name": "Ir Rahim",
+      "type": "lecturer"
+    },
+    {
+      "email": "admin",
+      "password": "admin",
+      "name": "Admin",
+      "type": "admin"
+    }
+  ],
+  "students": [
+    {
+      "id": "1@student.com",
+      "password": "admin",
+      "name": "Ali",
+      "subjects": [
+        "javascript",
+        "antioni"
+      ],
+      "marks": []
+    },
+    {
+      "id": "2@student.com",
+      "password": "admin",
+      "name": "Abu",
+      "subjects": "antioni",
+      "marks": []
+    }
+  ]
+}
