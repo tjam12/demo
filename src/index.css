@@ -11,24 +11,24 @@ body {
 }
 
 .container {
-  
-  margin: 10px auto;
+  margin: 5px;
   overflow: auto;
-  min-height: 300px;
+  min-height: 690px;
   border: 1px solid steelblue;
-  padding: 30px;
+  padding: 10px;
   border-radius: 5px;
-  
+  background-color: #1f2833;
+
 }
 
-.header {
+.header-hepy {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.btn {
+.btn-hepy {
   display: inline-block;
   float:right;
   background: #000;
@@ -43,113 +43,24 @@ body {
   font-family: inherit;
 }
 
-.btn:focus {
-  outline: none;
-}
-
-.btn:active {
-  transform: scale(0.98);
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
- 
-}
-
-.task {
-  background: #f4f4f4;
-  margin: 5px;
-  padding: 1px 20px;
+.sbmtbtn-hepy {
+  float:right;
+  border: none;
+  padding: 8px 15px;
+  margin: 2px;
+  border-radius: 5px;
   cursor: pointer;
-  
+  text-decoration: none;
+  font-size: 12px;
+  font-family: inherit;
 }
 
-.taskcolorless {
-  margin: 5px;
-  padding: 1px 20px;
-  
-}
-
-.task.reminder {
-  border-left: 5px solid green;
-}
-
-.task h3 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.add-form {
-  margin-bottom: 40px;
-}
-
-.form-control {
-  margin: 20px 0;
-}
-
-.form-control label {
-  display: block;
-}
-
-.form-control input {
-  width: 100%;
-  height: 40px;
-  margin: 5px;
-  padding: 3px 7px;
-  font-size: 17px;
-}
-
-.form-control-check {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.form-control-check label {
-  flex: 1;
-}
-
-.form-control-check input {
-  flex: 2;
-  height: 20px;
-}
-
-footer {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.subjectregister{
-  
-  margin-bottom: 40px;
-}
-
-.list{
-  margin-top:5px;
-  margin-bottom: 5px;
-}
-
-.Bottom {
-  position: relative;
-    float:right;
-    height: 280px;
-    width: 150px;
-    
-}
-.Bottom button{
-  position: absolute;
-        bottom: 0;
-        
-}
-
-.tableleft{
+.tableleft-hepy{
   float:left;
   width:50%;
 }
 
-.tableright{
+.tableright-hepy{
   float:right;
   text-align: center;
   width:50%;
@@ -160,28 +71,7 @@ input{
   width: 10%;
 }
 
-.studtable{
-  display: inline-block;
-  position:left;
-  text-align:left;
-  width:50%;
-}
-
-.studtable{
-  display: inline-block;
-  position:left;
-  text-align:left;
-  width:100%;
-}
-
-.marktable{
-  display: inline-block;
-  position:right;
-  text-align:center;
-  width:50%;
-}
-
-.sbmitbtn {
+.sbmitbtn-hepy {
   float:right;
   background: rgb(180, 185, 199);
   color: #0c0000;
@@ -197,26 +87,32 @@ input{
   font-family: inherit;
 }
 
-.radiosbj{
+.radiosbj-hepy{
   display:inline-block;
   text-align: left;
 }
 
-.topheader{
-  width:100%;
+.topheader-hepy{
+  width:79%;
+  left:21%;
   height:100px;
-  border-style: solid;
-  border-color: blue;
+  border:1px solid rgb(145, 145, 170);
   position:relative;
-  background: rgb(180, 185, 199);
+  background-color:#9fa8a3;
 }
 
-.toptext{
+.lecttext-hepy{
+ font-size: 30px;
+  margin-right: 20%;
+
+}
+
+.toptext-hepy{
   display: inline-block;
   font-size : 10px;
 }
 
-.topright{
+.topright-hepy{
   position:absolute;
   top:20px;
   right:30px;
@@ -225,88 +121,63 @@ input{
   height : 50px;
 }
 
-.bottomright{
+.profileborder-hepy{
+  float:left;
+  position:relative;
+  text-align: left;
+  width:20%;
+  height:610px;
+  border:1px solid rgb(145, 145, 170);
+  background-color: #85a893;
+}
+
+.leftmenu-hepy{
+  float:left;
+  position:relative;
+  text-align:left;
+  width:39%;
+  top:1.5%;
+  left: 1%;
+  height:500px;
+  border:1px solid rgb(145, 145, 170);
+  background-color:#e3e0cf;
+}
+
+.rightmenu-hepy{
+  float:right;
+  position:relative;
+  text-align:left;
+  height:500px;
+  width: 39%;
+  top: 1.5%;
+  border:1px solid rgb(145, 145, 170);
+  background-color:#e3e0cf;
+}
+
+.mainmenu-hepy{
+  position:relative;
+  text-align:center;
+  height:610px;
+  width:100%;
+  border:none;
+}
+
+.submainmenu-hepy{
+  position:relative;
+  text-align:center;
+  height:2px;
+  width:100%;
+  border:none;
+}
+
+.profiletext-hepy{
+  display: inline-block;
+  text-align:center;
+  font: 20px;
+}
+
+.bottomsbmt-hepy{
   position:absolute;
   bottom:1px;
   right:10px;
-}
-
-.leftmenu{
-  float:left;
-  position:relative;
-  text-align: center;
-  width:50%;
-  height:400px;
-  border-style: solid;
-  border-color: blue;
-}
-
-.rightmenu{
-  float:right;
-  position:relative;
-  text-align:center;
-  height:400px;
-  width:50%;
-  border-style: solid;
-  border-color: blue;
-}
-
-.bottommenuright{
-  float:bottom;
-  position:relative;
-  text-align:center;
-  height:450px;
-  width:100%;
-  border-style: solid;
-  border-color: blue;
-}
-
-.inputposition{
-  position:right;
-}
-
-.headertext{
-  text-align:center;
-}
-
-.subjectborder{
-  padding: 8px 15px;
-  bottom: 5px;
-  right: 25px;
-  margin: 10px;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: blue;
-  
-}
-
-.studentnameborder{
-  padding: 8px 15px;
-  bottom: 5px;
-  right: 25px;
-  margin: 10px;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: blue;
-  
-}
-
-.subjectlistboarder{
-  padding: 87px 15px;
-  bottom: 5px;
-  right: 25px;
-  margin: 10px;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: blue;
-}
-
-.studnamelistborder{
-  padding: 87px 15px;
-  bottom: 5px;
-  right: 25px;
-  margin: 10px;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: blue;
 }
