@@ -3,9 +3,10 @@
     {
       "id": 1,
       "subject": "javascript",
-      "marks": 30,
       "registered": false,
-      "selected": false
+      "selected": false,
+      "students":[],
+      "marks":[]
     },
     {
       "id": 2,

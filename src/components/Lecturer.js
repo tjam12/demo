@@ -24,6 +24,7 @@ const Lecturer = ({ Logout, Students, Subject, onToggle, onAdd, listSubject }) =
      
             </div>)
       )}
+      <p>HEADER</p>
         </div>
     )
 }
