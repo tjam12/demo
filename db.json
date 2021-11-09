@@ -4,13 +4,11 @@
       "id": 1,
       "subject": "javascript",
       "registered": false,
-      "selected": false,
-      "students": [],
-      "marks": []
+      "selected": false
     },
     {
       "id": 2,
-      "subject": "antioni",
+      "subject": "english",
       "marks": 60,
       "registered": false,
       "selected": false
@@ -54,14 +52,20 @@
       "id": "1@student.com",
       "password": "admin",
       "name": "Ali",
-      "subjects": [],
+      "subjects": [
+        "javascript",
+        "english",
+        "mathematics"
+      ],
       "marks": []
     },
     {
       "id": "2@student.com",
       "password": "admin",
       "name": "Abu",
-      "subjects": "antioni",
+      "subjects": [
+        "english"
+      ],
       "marks": []
     }
   ]

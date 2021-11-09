@@ -3,7 +3,20 @@ const Portal = ({ Logout, Subject, onToggle, onAdd, listSubject }) => {
     let prevlistSubject=[];
 
     /*{Subject.map((Subject)=>Subject.selected ? onAdd(Subject.subject):'')}*/
+
+    console.log("subject", Subject)
+
+    if(Subject.length>0){
+    Subject.forEach(function (item,index){
+      //if(item[2].includes("testing"))
+      
+      console.log("log inside loop",item.Subject)
+    })
+  }
+
     {Subject.map((Subject)=>Subject.selected&&!Subject.registered ? listSubject.push(Subject.subject):'')}
+
+
 
     onAdd(listSubject)
   };
