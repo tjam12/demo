@@ -5,8 +5,8 @@
       "subject": "javascript",
       "registered": false,
       "selected": false,
-      "students":[],
-      "marks":[]
+      "students": [],
+      "marks": []
     },
     {
       "id": 2,
@@ -54,10 +54,7 @@
       "id": "1@student.com",
       "password": "admin",
       "name": "Ali",
-      "subjects": [
-        "javascript",
-        "antioni"
-      ],
+      "subjects": [],
       "marks": []
     },
     {

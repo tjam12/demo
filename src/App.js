@@ -132,7 +132,6 @@ const toggleSelected = (id) => {
 
   return (
     <div className="container">
-
       {(user.email != "" && user.type === "student") ? (
         <Portal Logout={Logout} Subject={Subject} onToggle={toggleSelected} onAdd={addTask} listSubject={listSubject} />
       ): (
@@ -142,9 +141,6 @@ const toggleSelected = (id) => {
           <LoginForm Login={Login} error={error}/>
         )
       )}
-
-
-
     </div>
   );
 }

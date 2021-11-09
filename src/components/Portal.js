@@ -19,9 +19,14 @@ const Portal = ({ Logout, Subject, onToggle, onAdd, listSubject }) => {
 
   return (
     <div>
-      <header>Student Portal</header>
-      <button onClick={Logout}>Logout</button>
-      <div className="container">
+      
+      <div className="topheader">
+      <header className="toptext">Student Portal</header>
+      <button className="topright" onClick={Logout}>Logout</button>
+      </div>
+     
+
+      <div className="leftmenu">
         <h1 className="subjectregister">Subjects offered</h1>
 
         {Subject.map(
@@ -36,14 +41,14 @@ const Portal = ({ Logout, Subject, onToggle, onAdd, listSubject }) => {
             )
         )}
 
-        <div className="Bottom">
+        <div className="bottomright">
           <button className="btn btn-block" onClick={onAddSubj} >
             Register
           </button>
         </div>
       </div>
 
-      <div className="container">
+      <div className="rightmenu">
         <h1 className="subjectregister">Registered subject</h1>
         
         <div className='tableleft'>
@@ -71,7 +76,7 @@ const Portal = ({ Logout, Subject, onToggle, onAdd, listSubject }) => {
         )}
         </div>
         
-        <div className="Bottom">
+        <div className="bottomright">
           <button className="btn btn-block" onClick={onDelSubj}>
             Delete
           </button>

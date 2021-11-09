@@ -4,7 +4,7 @@ const Lecturer = ({ Logout, Students, Subject, onToggle, onAdd, listSubject }) =
     return (
         <div>
             <header>Lecturer Portal</header>
-      <button onClick={Logout}>Logout</button>
+      <button style='display:inline-block' onClick={Logout}>Logout</button>
             {Students.map((Students) =>
             
               <div
@@ -13,15 +13,12 @@ const Lecturer = ({ Logout, Students, Subject, onToggle, onAdd, listSubject }) =
               </div>
             
         )}
-
+        
 {Students.map((Students) =>Students.name === 'Ali' && (
-            
             <div>
-              
         {Students.subjects.map(subjects => 
           <h3>{subjects}</h3>
         )}
-     
             </div>)
       )}
       <p>HEADER</p>
