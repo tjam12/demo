@@ -2,7 +2,8 @@
   "subjects": [
     {
       "id": 1,
-      "subject": "javascript",
+      "subject": "CE300 Advance Data Communication System",
+      "credit hours": 3,
       "registered": false,
       "selected": false,
       "students": [],
@@ -10,14 +11,16 @@
     },
     {
       "id": 2,
-      "subject": "antioni",
+      "subject": "CE491 Final Year Project I",
+      "credit hours": 2,
       "marks": 60,
       "registered": false,
       "selected": false
     },
     {
       "id": 3,
-      "subject": "mathematics",
+      "subject": "CE 495 Emerging Communication 5G",
+      "credit hours": 3,
       "marks": 90,
       "registered": false,
       "selected": false
@@ -61,7 +64,7 @@
       "id": "2@student.com",
       "password": "admin",
       "name": "Abu",
-      "subjects": "antioni",
+      "subjects": [],
       "marks": []
     }
   ]
