@@ -4,7 +4,9 @@
       "id": 1,
       "subject": "javascript",
       "registered": false,
-      "selected": false
+      "selected": false,
+      "students": [],
+      "marks": []
     },
     {
       "id": 2,
@@ -51,20 +53,30 @@
     {
       "id": "1@student.com",
       "password": "admin",
-      "name": "Ali",
+      "name": "Khairun",
       "subjects": [
-        "javascript",
         "english",
-        "mathematics"
+        "javascript"
       ],
-      "marks": []
+      "marks": "50"
     },
     {
       "id": "2@student.com",
       "password": "admin",
-      "name": "Abu",
+      "name": "Hepy",
       "subjects": [
-        "english"
+        "english",
+        "mathematics"
+      ],
+      "marks": "50"
+    },
+    {
+      "id": "3@student.com",
+      "password": "admin",
+      "name": "Ali",
+      "subjects": [
+        "javascript",
+        "mathematics"
       ],
       "marks": []
     }

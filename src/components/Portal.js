@@ -1,10 +1,10 @@
-const Portal = ({ Logout, Subject, onToggle, onAdd, listSubject }) => {
+const Portal = ({ Logout, Subject, Students, onToggle, onAdd, listSubject }) => {
   const onAddSubj = (e) => {
     let prevlistSubject=[];
 
     /*{Subject.map((Subject)=>Subject.selected ? onAdd(Subject.subject):'')}*/
 
-    console.log("subject", Subject)
+    console.log("subject", Students)
 
     if(Subject.length>0){
     Subject.forEach(function (item,index){

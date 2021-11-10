@@ -1,54 +1,143 @@
-import React from 'react'
+import React, { useState } from "react";
+const Lecturer = ({
+  Logout,
+  Students,
+  Subject,
+  onToggle,
+  onAdd,
+  listSubject,
+}) => {
+  const [displaySbj, setSbj] = useState();
+  const [displayMark, setMark] = useState();
+  const [displaysingleStud, setsingleStud] = useState();
+  const [displayStud, setStud] = useState([])
 
-const Lecturer = ({ Logout, Students, Subject, onToggle, onAdd, listSubject }) => {
-  if(Students.length>0){
+  let regStud = []
+  let selStud = ''
+  let selSub =''
+
+  const submitHandler = (e) => {
+    console.log("Mark", displayMark)
+    console.log("Student", displaysingleStud)
+    console.log("Subject", displaySbj)
+    onAdd(displaysingleStud,displayMark)
+  };
+
+  const onClickStud = (student) => {
+    let prevlistSubject=[];
+
+    /*{Subject.map((Subject)=>Subject.selected ? onAdd(Subject.subject):'')}*/
     
-    const test = Students.filter((item) => !Subject.find(({subject}) => item.subjects === subject) && item.name);
-
-    const test2 = test.filter((item) => item.subjects.includes("english"))
-
-    /*if (test2.length>0){
-      let a = []
-      a.push()
-
-    }*/
-
-    //test2.map??
-    //for(let i=0;i<Students.length;i++){
-      //test.push(Students[i])
-
-      Subject.map((items)=>(<button name={items.subject}/>))
+   setsingleStud(student)
+    selStud=student
+    console.log(selStud)
+  };
 
 
-      console.log("loop", test)
-      console.log("loop2", test2[1].name)
+  const selSubset = (value) => {
+        console.log(value)
+        setSbj(value)
+        const test = Students.filter((item) => !Subject.find(({subject}) => item.subjects === subject) && item.name);
 
-    //}
+    const test2 = test.filter((item) => item.subjects.includes(value))
+    
+    console.log("loop1",regStud[1])
+
+    {test2.map((setregStud)=>{
+      regStud.push(setregStud.name)
+      console.log("loop1.5",setregStud.name)
+    })}
+
+
+    
+   // console.log("loop2", test2[1].name)
+    //console.log("loop3", regStud[1])
+
+    setStud(regStud)
   }
-  
-  
+
   return (
-        <div>
-            <header>Lecturer Portal</header>
-      <button onClick="javascript">Javascript</button>
-            {Students.map((Students) =>
-              <div>
-                <h3 key={Students.id}>{Students.name}</h3>
-              </div>
-        )}
+    <div>
+      <div className="topheader">
+        <h1 className="headertext">Lecturer Portal</h1>
+        <button className="btn" onClick={Logout}>
+          Logout
+        </button>
+      </div>
 
-        
-        
-{Students.map((Students) =>Students.name === 'Ali' && (
-            <div>
-        {Students.subjects.map(subjects => 
-          <h3>{subjects}</h3>
-        )}
-            </div>)
-      )}
+      <div className="leftmenu">
+        <h2 className="subjectborder">Subjects</h2>
+        <div className="subjectlistborder">
+          <p></p>
+          <form>
+          {Subject.map((subjects) => (
+            
+            <p>
+              <label>
+                <>
+                  <input
+                  
+                    type="radio"
+                    name="subject"
+                    value={subjects.subject}
+                    name="radiovalues"
+                    onChange={e => selSubset(e.target.value)}
+                    
+                  />
+                </>
+                {subjects.subject}
+              </label>
+            </p>
+            
+          ))}
+          </form>
+          
         </div>
-    )
-}
+      </div>
 
-export default Lecturer
+      <div className="rightmenu">
+      <h2 className="studentnameborder">Student Name</h2>
+      <div className="studnamelistborder">
+     
+     <form>
+      {displayStud.map((student) => (
+            <p>
+              <label>
+                <>
+                  <input
+                    type="radio"
+                    name="student"
+                    value={student}
+                    name="radiovalues"
+                    onChange={(e) => onClickStud(e.target.value)}
+                  />
+                </>
+                {student}
+              </label>
+            </p>
+          ))}
+      </form>
+      
+      
+      <keyinmark>
+      <div className="keyintable">
+          
+                  <div> 
+                   <input type="text" onChange={(e) => setMark(e.target.value)} />
+                   </div> 
+               
+       </div>
+      </keyinmark>
+      </div>
+    </div>
 
+      <div className="bottommenuleft">
+        <button className="btn" onClick={(e)=>submitHandler()}>
+          Submit
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Lecturer;

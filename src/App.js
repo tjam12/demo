@@ -75,6 +75,33 @@ const [Students, SetStudents] = useState ([])
 const [Emails, SetEmails] = useState ([])
 const [updSubject, setUpdSubject] = useState([])
 
+const addMarks = async (student, task) => {
+  console.log("Received student" ,student)
+  console.log("Received mark" ,task)
+
+  const test = Students.filter((item) => item.name.includes(student));
+
+  console.log(test[0].id)
+
+const updateSubject = await fetchStudents(test[0].id)
+const updTask = { ...updateSubject, marks: task }
+
+const res = await fetch(`http://localhost:5000/students/${test[0].id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(updTask),
+    })
+
+    const data = await res.json()
+
+console.log({updSubject})
+SetSubject(Subject.map((Subjects) => Subjects.selected ? {
+  ...Subjects, registered : !Subjects.registered, selected : !Subjects.selected
+}: Subjects))
+
+}
 
 const addTask = async (task) => {
   console.log(task)
@@ -136,7 +163,7 @@ const toggleSelected = (id) => {
         <Portal Logout={Logout} Subject={Subject} onToggle={toggleSelected} onAdd={addTask} listSubject={listSubject} />
       ): (
         (user.email != "" && user.type === "lecturer") ? (
-          <Lecturer Logout={Logout} Students={Students} Subject={Subject} onToggle={toggleSelected} onAdd={addTask} listSubject={listSubject} />
+          <Lecturer Logout={Logout} Students={Students} Subject={Subject} onToggle={toggleSelected} onAdd={addMarks} listSubject={listSubject} />
         ): (
           <LoginForm Login={Login} error={error}/>
         )
