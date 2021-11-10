@@ -10,43 +10,46 @@ const LoginForm = ({ Login, error }) => {
   };
   return (
     <form onSubmit={submitHandler}>
-      <div className="topheader">
-        <header className="toptext">University Portal</header>
+      <div className="topheader-yui">
+        <header className="toptext-yui" style={{ color: "whitesmoke" }}>
+          University Portal
+        </header>
       </div>
 
-      <div className="bodylogin">
-          <div className="bodyloginchild">
-            <img style={{"height":"130px"}} src={download} alt="logo"/>
-        <div>
-          {error != "" ? <div className="error">{error}</div> : ""}
+      <div className="bodylogin-yui">
+        <div className="bodyloginchild-yui">
+          <img style={{ height: "130px" }} src={download} alt="logo" />
           <div>
-            <label htmlFor="email">Email</label>
-            <input className="textbox"
-              type="text"
-              name="email"
-              id="email"
-              onChange={(e) =>
-                setDetails({ ...details, email: e.target.value })
-              }
-              value={details.email}
-            />
-          </div>
-          <div>
-            <label htmlFor="password">Password</label>
-            <input className="textbox"
-              type="text"
-              name="password"
-              id="password"
-              onChange={(e) =>
-                setDetails({ ...details, password: e.target.value })
-              }
-              value={details.password}
-            />
-          </div>
-          <input className="textbox" type="submit" value="Sign in" />
+            {error != "" ? <div className="error">{error}</div> : ""}
+            <div>
+              <label htmlFor="email">Email</label>
+              <input
+                className="textbox-yui"
+                type="text"
+                name="email"
+                id="email"
+                onChange={(e) =>
+                  setDetails({ ...details, email: e.target.value })
+                }
+                value={details.email}
+              />
+            </div>
+            <div>
+              <label htmlFor="password">Password</label>
+              <input
+                className="textbox-yui"
+                type="text"
+                name="password"
+                id="password"
+                onChange={(e) =>
+                  setDetails({ ...details, password: e.target.value })
+                }
+                value={details.password}
+              />
+            </div>
+            <input className="textbox-yui" type="submit" value="Sign in" />
           </div>
         </div>
-      
       </div>
     </form>
   );

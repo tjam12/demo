@@ -37,6 +37,12 @@
       "type": "student"
     },
     {
+      "email": "3@student.com",
+      "password": "admin",
+      "name": "Abu",
+      "type": "student"
+    },
+    {
       "email": "1@lecturer.com",
       "password": "admin",
       "name": "Ir Rahim",
@@ -54,11 +60,8 @@
       "id": "1@student.com",
       "password": "admin",
       "name": "Khairun",
-      "subjects": [
-        "english",
-        "javascript"
-      ],
-      "marks": "50"
+      "subjects": [],
+      "marks": "80"
     },
     {
       "id": "2@student.com",
