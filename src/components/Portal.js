@@ -29,6 +29,29 @@ const Portal = ({ Logout, Subject, onToggle, onAdd, listSubject }) => {
 
   return (
     <div>
+      <div className="profileborder">
+        <h2 className="profiletext">Profile</h2>
+        <h3 className="profilecontent">
+          <p1>Name: </p1> <br />
+          <p2>Nik Shahriz Danial Bin Suhaimin</p2>
+          <br />
+          <br />
+          <p3>ID:</p3>
+          <br />
+          <p4>B09180025</p4>
+          <br />
+          <br />
+          <p5>Semester:</p5>
+          <br />
+          <p6>September 2021</p6>
+          <br />
+          <br />
+          <p7>Programme:</p7>
+          <br />
+          <p8>Bachelor of Computer Engineering</p8>
+          <br />
+        </h3>
+      </div>
       <div className="topheader">
         <header className="toptext">Student Portal</header>
         <button className="topright" onClick={Logout}>
